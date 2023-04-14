@@ -47,7 +47,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: base node install
-        run: npm install
+        run: npm install && npm run build
       - name: Run Tailwind deps
         run: npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css
       - name: Install NodeJS deps
