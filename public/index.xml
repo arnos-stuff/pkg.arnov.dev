@@ -1,72 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Sh.Pkg</title>
-    <link>https://pkg.arnov.dev/</link>
-    <description>Recent content on Sh.Pkg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 18 May 2022 11:10:36 +0800</lastBuildDate><atom:link href="https://pkg.arnov.dev/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>News Post 1</title>
-      <link>https://pkg.arnov.dev/posts/news-post-1/</link>
-      <pubDate>Wed, 18 May 2022 11:10:36 +0800</pubDate>
-      
-      <guid>https://pkg.arnov.dev/posts/news-post-1/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://pkg.arnov.dev/about/</link>
-      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
-      
-      <guid>https://pkg.arnov.dev/about/</guid>
-      <description>Hi 👋, I&amp;rsquo;m Arno! Here&amp;rsquo;s a short introduction about me:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shae.Pkg</title><link>https://pkg.arnov.dev/</link><description>Recent content on Shae.Pkg</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 18 May 2022 11:10:36 +0800</lastBuildDate><atom:link href="https://pkg.arnov.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>News Post 1</title><link>https://pkg.arnov.dev/posts/news-post-1/</link><pubDate>Wed, 18 May 2022 11:10:36 +0800</pubDate><guid>https://pkg.arnov.dev/posts/news-post-1/</guid><description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description></item><item><title>About</title><link>https://pkg.arnov.dev/about/</link><pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate><guid>https://pkg.arnov.dev/about/</guid><description>Hi 👋, I&amp;rsquo;m Arno! Here&amp;rsquo;s a short introduction about me:
 What I do I&amp;rsquo;m currently working as a junior IT &amp;amp; Data Consultant somewhere in the very pretty business hub of La Défense, but I&amp;rsquo;m also trying to learn a bit more about programming and web development. I&amp;rsquo;m a self-anointed pythonista 🐍, but I&amp;rsquo;m trying to learn Julia &amp;amp; Javascript aswell !
-I also work a lot with SQL at my current job, though I&amp;rsquo;m eyeing on the recent trends like Snowflake and BigQuery 👀.</description>
-    </item>
-    
-    <item>
-      <title>Blog Post 2</title>
-      <link>https://pkg.arnov.dev/posts/blog-post-2/</link>
-      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
-      
-      <guid>https://pkg.arnov.dev/posts/blog-post-2/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://pkg.arnov.dev/contact/</link>
-      <pubDate>Sat, 18 Dec 2021 03:10:36 +0000</pubDate>
-      
-      <guid>https://pkg.arnov.dev/contact/</guid>
-      <description>Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
-Your Email:Subject:Your message:Send Message</description>
-    </item>
-    
-    <item>
-      <title>Prose</title>
-      <link>https://pkg.arnov.dev/prose/</link>
-      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
-      
-      <guid>https://pkg.arnov.dev/prose/</guid>
-      <description>@tailwindcss/typography View on GitHub!
+I also work a lot with SQL at my current job, though I&amp;rsquo;m eyeing on the recent trends like Snowflake and BigQuery 👀.</description></item><item><title>Blog Post 2</title><link>https://pkg.arnov.dev/posts/blog-post-2/</link><pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate><guid>https://pkg.arnov.dev/posts/blog-post-2/</guid><description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description></item><item><title>Contact</title><link>https://pkg.arnov.dev/contact/</link><pubDate>Sat, 18 Dec 2021 03:10:36 +0000</pubDate><guid>https://pkg.arnov.dev/contact/</guid><description>
+Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
+Your Email:
+Subject:
+Your message:
+Send Message</description></item><item><title>Prose</title><link>https://pkg.arnov.dev/prose/</link><pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate><guid>https://pkg.arnov.dev/prose/</guid><description>@tailwindcss/typography View on GitHub!
 Beautiful typographic defaults for HTML you don&amp;rsquo;t control.
 The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.
 Tailwind CSS IntelliSense extension for Visual Studio Code
-&amp;lt;article class=&amp;#34;prose lg:prose-xl&amp;#34;&amp;gt;{{ markdown }}&amp;lt;/article&amp;gt; To see what it looks like in action, check out our live demo on Tailwind Play.</description>
-    </item>
-    
-    <item>
-      <title>A small ix.io python CLI</title>
-      <link>https://pkg.arnov.dev/posts/blog-post-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pkg.arnov.dev/posts/blog-post-1/</guid>
-      <description>A rich CLI template for pastebin CLI tools</description>
-    </item>
-    
-  </channel>
-</rss>
+&amp;lt;article class=&amp;#34;prose lg:prose-xl&amp;#34;&amp;gt;
+{{ markdown }}
+&amp;lt;/article&amp;gt; To see what it looks like in action, check out our live demo on Tailwind Play.</description></item><item><title>A small ix.io python CLI</title><link>https://pkg.arnov.dev/posts/blog-post-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pkg.arnov.dev/posts/blog-post-1/</guid><description>A rich CLI template for pastebin CLI tools</description></item></channel></rss>
