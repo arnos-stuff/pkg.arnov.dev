@@ -33,7 +33,6 @@ I'm currently working on a few projects, but I'm not sure I'll be able to finish
 | 2 | 🐍 | A python [data API for eurostat related data](https://api.arnov.dev/) |
 | 3 | JS | A [Vue.js website](https://vue.arnov.dev/) to slowly learn [Vue.js](https://vuejs.org/) |
 | 4 | 🤓 | A small [blog about math related topics][5] when I feel like talking theory |
-: {tbl-colwidths="[10, 10, 80]"}
 
 
 That's a lot ! But I also have some personnal matters ...
@@ -69,7 +68,6 @@ I'm a HUGE music nerd, just to name a few of my favorite genres:
 | Hyperpop | I'm a huge fan of the work of Charli XCX ! |
 | K-pop | I've recently discovered I like K-pop thanks to League of Legends' KDA group, and I'm slowly getting into the genre  .. |
 | Metal | I love Gojira obviously, but a lot of artists here and there, the progressive Metal scene is pretty dope aswell 🤩 |
-: {tbl-colwidths="[20, 80]"}
 
 ... and many more 🎵
 

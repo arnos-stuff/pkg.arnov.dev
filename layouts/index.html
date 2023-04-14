@@ -49,6 +49,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- More main page content here... -->
 
@@ -88,7 +89,10 @@
                         </div>
                         <div class="relative px-8">
                             <div>
-                                <img class="h-12" src="images/shaes-packages-xsm.svg" alt="Workcation">
+                                {{ $icon := resources.GetMatch "images/global/shaes-packages-xsm.svg" }}
+                                <img srcset="{{ $icon.RelPermalink }}"
+                                src="{{ $icon.RelPermalink }}" class="h-12"
+                                alt="Workcation">
                             </div>
                             <blockquote class="mt-8">
                                 <div class="relative text-lg font-medium text-white md:flex-grow">
