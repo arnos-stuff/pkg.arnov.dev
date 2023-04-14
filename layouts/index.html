@@ -215,115 +215,37 @@
         <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
             <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    {{ $langRust := resources.GetMatch "images/global/Rust/Fuchsia.png" }}
+                    {{ $langRust := resources.GetMatch ".images/global/rs/200x200/Fuchsia.svg" }}
 
-                    {{ $t := ($langRust.Fit "50x50 q95") }}
-                    {{ $tsm := ($langRust.Fit "100x100 q95") }}
-                    {{ $sm := ($langRust.Fit "150x150 q95") }}
-                    {{ $smd := ($langRust.Fit "200x200 q95") }}
-                    {{ $md := ($langRust.Fit "250x250 q95") }}
-                    {{ $mdlg := ($langRust.Fit "350x350 q95") }}
-                    {{ $lg := ($langRust.Fit "400x400 q95") }}
-                    {{ $xlg := ($langRust.Fit "450x450 q95") }}
-                    {{ $xxlg := ($langRust.Fit "500x500 q95") }}
-                    
-
-                    <img srcset="
-                        {{- with $t.RelPermalink -}}{{.}} 50w{{- end -}}
-                        {{- with $tsm.RelPermalink -}}{{.}} 100w{{- end -}}
-                        {{- with $sm.RelPermalink -}}{{.}} 150w{{- end -}}
-                        {{- with $smd.RelPermalink -}}{{.}} 200w{{- end -}}
-                        {{- with $md.RelPermalink -}}{{.}} 250w{{- end -}}
-                        {{- with $mdlg.RelPermalink -}}{{.}} 350w{{- end -}}
-                        {{- with $lg.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $xlg.RelPermalink -}}{{.}} 450w{{- end -}}
-                        {{- with $xxlg.RelPermalink -}}{{.}} 500w{{- end -}}" src="{{ $langRust.RelPermalink }}"
+                    <img srcset="{{ $langRust.RelPermalink }}" src="{{ $langRust.RelPermalink }}"
                          alt="Rust Lang"
-                         class="w-auto rounded-sm shadow-sm sm:w-auto" loading="lazy" />
+                         class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    {{ $langPython := resources.GetMatch "images/global/Python/Fuchsia.png" }}
+                    {{ $langPython := resources.GetMatch "/images/global/py/200x200/Fuchsia.svg" }}
 
-                    {{ $t := ($langPython.Fit "50x50 q95") }}
-                    {{ $tsm := ($langPython.Fit "100x100 q95") }}
-                    {{ $sm := ($langPython.Fit "150x150 q95") }}
-                    {{ $smd := ($langPython.Fit "200x200 q95") }}
-                    {{ $md := ($langPython.Fit "250x250 q95") }}
-                    {{ $mdlg := ($langPython.Fit "350x350 q95") }}
-                    {{ $lg := ($langPython.Fit "400x400 q95") }}
-                    {{ $xlg := ($langPython.Fit "450x450 q95") }}
-                    {{ $xxlg := ($langPython.Fit "500x500 q95") }}
-                    
-
-                    <img srcset="
-                        {{- with $t.RelPermalink -}}{{.}} 50w{{- end -}}
-                        {{- with $tsm.RelPermalink -}}{{.}} 100w{{- end -}}
-                        {{- with $sm.RelPermalink -}}{{.}} 150w{{- end -}}
-                        {{- with $smd.RelPermalink -}}{{.}} 200w{{- end -}}
-                        {{- with $md.RelPermalink -}}{{.}} 250w{{- end -}}
-                        {{- with $mdlg.RelPermalink -}}{{.}} 350w{{- end -}}
-                        {{- with $lg.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $xlg.RelPermalink -}}{{.}} 450w{{- end -}}
-                        {{- with $xxlg.RelPermalink -}}{{.}} 500w{{- end -}}" src="{{ $langPython.RelPermalink }}"
-                         alt="Rust Lang"
-                         class="w-auto rounded-sm shadow-sm sm:w-auto" loading="lazy" />
+                    <img srcset="{{ $langPython.RelPermalink }}" src="{{ $langPython.RelPermalink }}"
+                        alt="Python Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    {{ $langJS := resources.GetMatch "images/global/Javascript/Fuchsia.png" }}
+                    {{ $langJulia := resources.GetMatch "/images/global/jl/200x200/Fuchsia.svg" }}
 
-                    {{ $t := ($langJS.Fit "50x50 q95") }}
-                    {{ $tsm := ($langJS.Fit "100x100 q95") }}
-                    {{ $sm := ($langJS.Fit "150x150 q95") }}
-                    {{ $smd := ($langJS.Fit "200x200 q95") }}
-                    {{ $md := ($langJS.Fit "250x250 q95") }}
-                    {{ $mdlg := ($langJS.Fit "350x350 q95") }}
-                    {{ $lg := ($langJS.Fit "400x400 q95") }}
-                    {{ $xlg := ($langJS.Fit "450x450 q95") }}
-                    {{ $xxlg := ($langJS.Fit "500x500 q95") }}
-                    
 
-                    <img srcset="
-                        {{- with $t.RelPermalink -}}{{.}} 50w{{- end -}}
-                        {{- with $tsm.RelPermalink -}}{{.}} 100w{{- end -}}
-                        {{- with $sm.RelPermalink -}}{{.}} 150w{{- end -}}
-                        {{- with $smd.RelPermalink -}}{{.}} 200w{{- end -}}
-                        {{- with $md.RelPermalink -}}{{.}} 250w{{- end -}}
-                        {{- with $mdlg.RelPermalink -}}{{.}} 350w{{- end -}}
-                        {{- with $lg.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $xlg.RelPermalink -}}{{.}} 450w{{- end -}}
-                        {{- with $xxlg.RelPermalink -}}{{.}} 500w{{- end -}}" src="{{ $langJS.RelPermalink }}"
-                         alt="Rust Lang"
-                         class="w-auto rounded-sm shadow-sm sm:w-auto" loading="lazy" />
+                    <img srcset="{{ $langJulia.RelPermalink }}" src="{{ $langJulia.RelPermalink }}"
+                        alt="Julia Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    {{ $langJulia := resources.GetMatch "images/global/Julia/Fuchsia.png" }}
+                    {{ $langJS := resources.GetMatch "/images/global/js/200x200/Fuchsia.svg" }}
 
-                    {{ $t := ($langJulia.Fit "50x50 q95") }}
-                    {{ $tsm := ($langJulia.Fit "100x100 q95") }}
-                    {{ $sm := ($langJulia.Fit "150x150 q95") }}
-                    {{ $smd := ($langJulia.Fit "200x200 q95") }}
-                    {{ $md := ($langJulia.Fit "250x250 q95") }}
-                    {{ $mdlg := ($langJulia.Fit "350x350 q95") }}
-                    {{ $lg := ($langJulia.Fit "400x400 q95") }}
-                    {{ $xlg := ($langJulia.Fit "450x450 q95") }}
-                    {{ $xxlg := ($langJulia.Fit "500x500 q95") }}
-                    
 
-                    <img srcset="
-                        {{- with $t.RelPermalink -}}{{.}} 50w{{- end -}}
-                        {{- with $tsm.RelPermalink -}}{{.}} 100w{{- end -}}
-                        {{- with $sm.RelPermalink -}}{{.}} 150w{{- end -}}
-                        {{- with $smd.RelPermalink -}}{{.}} 200w{{- end -}}
-                        {{- with $md.RelPermalink -}}{{.}} 250w{{- end -}}
-                        {{- with $mdlg.RelPermalink -}}{{.}} 350w{{- end -}}
-                        {{- with $lg.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $xlg.RelPermalink -}}{{.}} 450w{{- end -}}
-                        {{- with $xxlg.RelPermalink -}}{{.}} 500w{{- end -}}" src="{{ $langJulia.RelPermalink }}"
-                         alt="Rust Lang"
-                         class="w-auto rounded-sm shadow-sm sm:w-auto" loading="lazy" />
+                    <img srcset="{{ $langJS.RelPermalink }}" src="{{ $langJS.RelPermalink }}"
+                        alt="JS Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
                 
             </div>
