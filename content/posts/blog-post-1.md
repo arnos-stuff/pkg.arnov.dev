@@ -1,257 +1,112 @@
 ---
-title: "Blog Post 1"
-date: 2022-06-18T11:10:36+08:00
+title: "A small ix.io python CLI"
+date: now
 draft: false
 language: en
-featured_image: ../assets/images/featured/featured-img-placeholder.png
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero. Vestibulum vel convallis felis. Ut finibus lorem vestibulum lobortis rhoncus.
-author: TailBliss
-authorimage: ../assets/images/global/author.webp
+featured_image: ../assets/images/global/Branding/Python-Sign.webp
+summary: A rich CLI template for pastebin CLI tools
+description: ix is a command line interface for [ix.io](https://ix.io), a pastebin service. I tried to make this CLI as "reusable" as possible, so that you can clone this repository and use it as a template for your own pastebin CLI tool.
+author: shae
+authorimage: ../assets/images/global/Branding/Python-Sign.webp
 categories: Blog
 tags: Blog
 ---
-__Advertisement :smile:__
+# A rich CLI template for pastebin CLI tools
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
+ix is a command line interface for [ix.io](https://ix.io), a pastebin service.
 
-You will like those projects!
+I tried to make this CLI as "reusable" as possible, so that you can clone this repository and use it as a template for your own pastebin CLI tool.
 
----
+## How to use this template
 
-# h1 Heading :blush:
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+1. Clone this repository
+2. Rename the `ix_cli` directory to the name of your pastebin service
+3. Replace the variable `PROVIDER_URL` in `ix_cli/utils.py` with the URL of your pastebin service (e.g. `https://paste.example.com`)
+4. Replace the name of the app in `pyproject.toml` with the name of your pastebin service in both the `name` and `[tool.poetry.scripts]` sections
+5. Install [poetry](https://python-poetry.org) and run `poetry install` to install the dependencies
+6. Run a basic command to make sure everything works: `<new-app-name> s "Hello, world!"`
+7. Edit the README to your liking
+8. Commit your changes and push them to your repository
+9. Publish your app to [PyPI](https://pypi.org) using `poetry build` and `poetry publish`
 
+## Installation
 
-## Horizontal Rules
+### Using pip
 
-***
-
----
-
-___
-
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
+```bash
+pip install ix-cli
 ```
 
-Syntax highlighting
+### Cloning the repository
 
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
+```bash
+git clone https://github.com/arnos-stuff/ix.git
 ```
 
-## Tables
+## Basic usage
 
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+### As a Python module
 
-Right aligned columns
+```python
+from ix_cli import uploadFromFile, uploadFromStdin, download, getHistory
 
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+# Upload from stdin
+url = uploadFromStdin("Hello, world!")
+print(url)
 
+# Upload from file
+url = uploadFromFile("README.md")
+print(url)
 
-## Links
+# Download
+data = download(url)
+print(data)
+```
 
-[link text](http://dev.nodeca.com)
+### As a CLI tool
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+Using ix is simple. Just pipe some text into it:
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+```bash
+echo "Hello, world!" | ix s
+```
 
+This will print the URL of the paste to stdout. You can also use ix to upload files:
 
-## Images
+```bash
+ix f README.md
+```
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+This CLI has an extra feature: it stores the past 100 URLs in a local cache. You can use this to quickly access your pastes:
 
-Like links, Images also have a footnote style syntax
+```bash
+ix h
+```
 
-![Alt text][id]
+This will print a list of your pastes, with the most recent at the top. You also have the option to limit the number of pastes shown:
 
-With a reference later in the document defining the URL location:
+```bash
+ix h -n 3
+```
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+This will print the 3 most recent pastes.
 
+## Getting the data back
 
-## Plugins
+You can use ix to retrieve the data from a paste by using the `g` command:
 
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+```bash
+ix g https://ix.io/1QZp
+```
 
+or simply
 
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+```bash
+ix g 1QZp
+```
 
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
+This will print the contents of the paste to stdout.
 
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+## License
 
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

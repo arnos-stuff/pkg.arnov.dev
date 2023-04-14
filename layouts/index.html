@@ -6,19 +6,19 @@
                 <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
                     <h1
                         class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-                        TailBliss</h1>
+                        Hi 👋</h1>
                     <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
-                        Super Fast, and Flexible
+                        Welcome to my package-dedicated website !
                     </h2>
                     <a href="https://github.com/nusserstudios/tailbliss"
                        class="block py-4 mx-auto space-x-4 sm:inline-flex md:inline-flex sm:text-center sm:block">
                         <span
                               class="rounded bg-gray-50 px-2.5 py-1 text-sm font-bold text-gray-900 block max-w-fit mx-auto md:min-w-fit mb-2">
-                            What's new
+                            My latest package
                         </span>
                         <span
                               class="inline-flex items-center mb-2 space-x-1 text-sm font-medium text-gray-800 dark:text-white md:min-w-fit">
-                            <span>Just shipped version 0.1.0</span>
+                            <span> latest tag (to be added)</span>
                             <!-- Heroicon name: mini/chevron-right -->
                             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                  fill="currentColor" aria-hidden="true">
@@ -30,18 +30,20 @@
                     </a>
                     <p
                        class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">
-                        A Hugo theme built with love, using TailwindCSS 3, Apline.JS, and Hugo
-                        Pipes. Images are optimized for use with Hugo Pipes for WebP format.</p>
+                        A cross-language reference website where I host anything interesting I develop 😎</p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/pages/tailbliss-rocket-indigo.png" }}
+                    {{ $hero := resources.GetMatch "images/featured/Signature-Page.png" }}
 
-                    {{ $thumb := ($hero.Fill "400x400 webp q90") }}
-                    {{ $large := ($hero.Fill "576x576 webp q90") }}
+                    {{ $thumb := ($hero.Fill "640x360 webp q99") }}
+                    {{ $large := ($hero.Fill "1280x720 webp q99") }}
+                    {{ $xlarge := ($hero.Fill "2048x1152 webp q99") }}
 
                     <img srcset="
                         {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}"
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}
+                        {{- with $xlarge.RelPermalink -}}, {{.}} 576w{{- end -}}"
+                        src="{{ $hero.RelPermalink }}"
                          width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" />
                 </div>
             </div>
@@ -73,7 +75,7 @@
                 <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
                     <!-- Testimonial card-->
                     <div class="relative pt-64 pb-10 overflow-hidden shadow-xl rounded-2xl">
-                        {{ $missionimage := resources.Get "images/pages/our-mission.png" }}
+                        {{ $missionimage := resources.Get "images/global/Topo-F.png" }}
                         {{ with $missionimage }}
                         {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
                         <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
@@ -86,7 +88,7 @@
                         </div>
                         <div class="relative px-8">
                             <div>
-                                <img class="h-12" src="images/tailbliss-white.svg" alt="Workcation">
+                                <img class="h-12" src="images/shaes-packages-xsm.svg" alt="Workcation">
                             </div>
                             <blockquote class="mt-8">
                                 <div class="relative text-lg font-medium text-white md:flex-grow">
@@ -95,16 +97,14 @@
                                         <path
                                               d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                                     </svg>
-                                    <p class="relative">Tincidunt integer commodo, cursus etiam
-                                        aliquam neque, et. Consectetur pretium in volutpat, diam.
-                                        Montes, magna cursus nulla feugiat dignissim id lobortis
-                                        amet.
+                                    <p class="relative">
+                                        You learn by doing, be it in programming, Machine Learning, or Mathematics. Just grab a topic and start writing, coding, problem solving !
                                     </p>
                                 </div>
 
                                 <footer class="mt-4">
                                     <p class="text-base font-semibold text-gray-200">
-                                        John Doe, CEO at TailBliss
+                                        Me, Shae/Arno 😈
                                     </p>
                                 </footer>
                             </blockquote>
@@ -193,10 +193,10 @@
                 <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
                     {{ $heroOne := resources.GetMatch "images/pages/hacktoberfest.jpg" }}
 
-                    {{ $tiny := ($heroOne.Fit "480x280 q80") }}
-                    {{ $small := ($heroOne.Fit "768x280 q80") }}
-                    {{ $medium := ($heroOne.Fit "1024x280 q80") }}
-                    {{ $large := ($heroOne.Fit "1374x1000 q80") }}
+                    {{ $tiny := ($heroOne.Fit "200x200 q95") }}
+                    {{ $small := ($heroOne.Fit "400x400 q95") }}
+                    {{ $medium := ($heroOne.Fit "600x600 q95") }}
+                    {{ $large := ($heroOne.Fit "800x800 q95") }}
 
                     <img srcset="
                         {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
@@ -215,257 +215,54 @@
         <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
             <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                            c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                            c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                            c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                            c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor" d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                            c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                            c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                            c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                            c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                            c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                            c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                            c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                            c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                            c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
+                    {{ $langRust := resources.GetMatch "images/global/ProgLangLogo/Rust/200x200/Fuchsia.svg" }}
 
+                    <img srcset="{{ $langRust.RelPermalink }}" src="{{ $langRust.RelPermalink }}"
+                         alt="Rust Lang"
+                         class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                                                c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                                                c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor" d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                                                c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                                                c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                                                c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                                                c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                                                c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                                                c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                                                c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                                    36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
+                    {{ $langPython := resources.GetMatch "images/global/ProgLangLogo/Python/200x200/Fuchsia.svg" }}
+
+
+                    <img srcset="{{ $langPython.RelPermalink }}" src="{{ $langPython.RelPermalink }}"
+                        alt="Python Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                                                                    c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                                                                    c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                                                                    c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                                                                    c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                                                                    c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                                                                    c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                                                                    c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                                                        36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
+                    {{ $langJulia := resources.GetMatch "images/global/ProgLangLogo/Julia/200x200/Fuchsia.svg" }}
+
+
+                    <img srcset="{{ $langJulia.RelPermalink }}" src="{{ $langJulia.RelPermalink }}"
+                        alt="Julia Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
 
                 <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                                                                    c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                                                                    c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                                                                    c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                                                                    c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                                                                    c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                                                                    c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                                                                    c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                                                        36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
-                </div>
+                    {{ $langJS := resources.GetMatch "images/global/ProgLangLogo/Javascript/200x200/Fuchsia.svg" }}
 
-                <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                                                                    c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                                                                    c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                                                                    c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                                                                    c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                                                                    c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                                                                    c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                                                                    c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                                                        36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
-                </div>
 
-                <div class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 48"
-                         style="enable-background:new 0 0 138 48;" xml:space="preserve" alt="Logo" class="max-h-12">
-                        <g>
-                            <path class="text-gray-900 dark:text-white" d="M62,32.6V15.4h4.7v13.5h7v3.8H62z"
-                                  fill="currentColor" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M89.8,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C89.5,20.5,89.8,22.1,89.8,24z M85,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6c-0.5-0.4-1.2-0.6-2-0.6
-                                                                    c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6C78,22.1,77.9,23,77.9,24c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.2,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C84.9,25.9,85,25,85,24z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M102,21.1c-0.1-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.5-0.3-0.8-0.4s-0.6-0.1-1-0.1
-                                                                    c-0.8,0-1.5,0.2-2,0.6c-0.6,0.4-1,0.9-1.3,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6c0.3,0.7,0.7,1.3,1.2,1.6
-                                                                    c0.5,0.4,1.2,0.6,2,0.6c0.7,0,1.3-0.1,1.8-0.3s0.8-0.5,1.1-0.9c0.2-0.4,0.4-0.8,0.4-1.3l0.8,0.1h-3.9V23h7.6v2.4c0,1.6-0.3,2.9-1,4
-                                                                    c-0.7,1.1-1.6,2-2.7,2.6c-1.2,0.6-2.5,0.9-4,0.9c-1.7,0-3.1-0.4-4.4-1.1c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.7
-                                                                    c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.8-0.8,1.7-1.3,2.7-1.7c1-0.4,2.1-0.6,3.3-0.6c1,0,2,0.1,2.8,0.4s1.7,0.7,2.3,1.2
-                                                                    c0.7,0.5,1.2,1.2,1.6,1.9c0.4,0.7,0.7,1.5,0.8,2.4H102z" />
-                            <path class="text-gray-900 dark:text-white" fill="currentColor"
-                                  d="M124.6,24c0,1.9-0.4,3.5-1.1,4.8c-0.7,1.3-1.8,2.3-3,3c-1.3,0.7-2.7,1-4.2,1c-1.6,0-3-0.3-4.2-1
-                                                                    c-1.3-0.7-2.3-1.7-3-3c-0.7-1.3-1.1-2.9-1.1-4.8c0-1.9,0.4-3.5,1.1-4.8c0.7-1.3,1.7-2.3,3-3c1.3-0.7,2.7-1,4.2-1c1.6,0,3,0.3,4.2,1
-                                                                    c1.3,0.7,2.3,1.7,3,3C124.2,20.5,124.6,22.1,124.6,24z M119.8,24c0-1-0.1-1.9-0.4-2.6c-0.3-0.7-0.7-1.2-1.2-1.6
-                                                                    c-0.5-0.4-1.2-0.6-2-0.6c-0.8,0-1.4,0.2-2,0.6c-0.5,0.4-0.9,0.9-1.2,1.6c-0.3,0.7-0.4,1.6-0.4,2.6c0,1,0.1,1.9,0.4,2.6
-                                                                    c0.3,0.7,0.7,1.2,1.2,1.6c0.5,0.4,1.2,0.6,2,0.6c0.8,0,1.4-0.2,2-0.6c0.5-0.4,0.9-0.9,1.2-1.6C119.7,25.9,119.8,25,119.8,24z" />
-                        </g>
-                        <g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor"
-                                         points="33.7,36.8 19,36.8 19,8 16.5,8 16.5,36.6 13.4,36.6 13.4,4.9 22.1,4.9 22.1,33.7 33.7,33.7" />
-                            </g>
-                            <g>
-                                <polygon class="text-gray-900 dark:text-white" fill="currentColor" points="46.3,43.1 13.4,43.1 13.4,40 43.2,40 43.2,8 28.2,8 28.2,27.4 40,27.4 40,36.6 36.9,36.6 
-                                                                        36.9,30.5 25.1,30.5 25.1,4.9 46.3,4.9" />
-                            </g>
-                        </g>
-                    </svg>
+                    <img srcset="{{ $langJS.RelPermalink }}" src="{{ $langJS.RelPermalink }}"
+                        alt="JS Lang"
+                        class="w-auto rounded-sm shadow-sm sm:min-w-fit" loading="lazy" />
                 </div>
+                
             </div>
+            
             <div>
                 <h2 class="pt-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                    Backed by world-renowned investors
+                    A wide array of languages
                 </h2>
-                <p class="max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white">Sagittis scelerisque nulla
-                    cursus in enim
-                    consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed
-                    aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae
-                    fames senectus vitae.
+                <p class="max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white">
+                    My aim is to have a close to full-stack knowledge of the data science ecosystem.
+                    That means both the dataviz and dashboard design that happens with JS in the front, the python code that does the
+                    model training, julia code for specific optimization and convex programming, and finally rust for the low-level quickness !
                 </p>
                 <div class="my-6">
                     <a href="#" class="text-base font-medium text-primary-400 dark:text-primary-100">
-                        Meet our investors and advisors&nbsp&rarr;
+                        Check out my packages&nbsp&rarr;
                     </a>
                 </div>
             </div>
@@ -495,7 +292,7 @@
                             <a href="{{.Permalink}}">
                                 {{ with .Params.featured_image }}
                                 {{ with resources.Get . }}
-                                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
+                                {{ $postimage := (.Resize "500x webp q95").RelPermalink }}
                                 <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg"
                                      width="100%" height="" loading="lazy" alt="{{ .Title }}" />
 

@@ -1,5 +1,5 @@
-baseURL = "https://tailbliss.netlify.app/"
-title = "TailBliss"
+baseURL = "https://pkg.arnov.dev"
+title = "Sh.Pkg"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -13,14 +13,13 @@ darkmode_js = ["assets/js/darkmode.js"]
 enableInlineShortcodes = true
 
 [params]
-author = "Nusser Studios"
-authorimage = "../assets/images/global/author.webp"
-github = "https://github.com/nusserstudios"
-facebook = "https://facebook.com/nusserstudios"
-og_image = "/images/tailbliss-cover.png"
-sitename = "TailBliss"
-twitter = "@nusserstudios"
-description = "TailBliss is Hugo Starter"
+author = "Arno / Shae"
+authorimage = "../assets/images/global/icon-big.png"
+github = "https://github.com/arnos-stuff"
+og_image = "../assets/images/Topo-F.png"
+sitename = "Arno's Packages"
+twitter = "@arno_shae"
+description = "My small package dedicated website"
 
 [markup]
 [markup.goldmark]

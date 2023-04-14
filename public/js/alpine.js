@@ -1,5 +1,5 @@
 (() => {
-  // node_modules/.pnpm/alpinejs@3.12.0/node_modules/alpinejs/dist/module.esm.js
+  // node_modules/alpinejs/dist/module.esm.js
   var flushPending = false;
   var flushing = false;
   var queue = [];

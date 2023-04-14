@@ -7,236 +7,83 @@ description: About Us
 featured_image: ../assets/images/featured/featured-img-placeholder.png
 ---
 
-# h1 Heading :blush:
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+# Hi 👋, I'm Arno!
 
+Here's a short introduction about me:
 
-## Horizontal Rules
+## What I do
 
-***
+I'm currently working as a junior IT & Data Consultant somewhere in the [very pretty][2] business hub of [La Défense][1], but I'm also trying to learn a bit more about programming and web development. I'm a self-anointed pythonista 🐍, but I'm trying to learn Julia & Javascript aswell !  
 
----
+I also work a lot with [SQL](https://en.wikipedia.org/wiki/SQL) at my current job, though I'm eyeing on the recent trends like [Snowflake](https://www.snowflake.com/) and [BigQuery](https://cloud.google.com/bigquery) 👀.
 
-___
+Here's a picture of my workplace (and [some others I took in the area][3]):
 
+<p align="center">
+  <img src="https://i.imgur.com/Bjj0AGm.png" width="800"/>
+</p>
 
-## Typographic replacements
+## What I'm working on
 
-Enable typographer option to see result.
+I'm currently working on a few projects, but I'm not sure I'll be able to finish them anytime soon. I'm also trying to learn a bit more about web development, so I'm trying to make a few websites. Here's a list of the projects I'm currently working on:
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+| Number | Language | Description |
+| --- | --- | --- |
+| 1 | 🐍 | A few unpolished [python packages](https://pypi.org/user/arnos-stuff/) |
+| 2 | 🐍 | A python [data API for eurostat related data](https://api.arnov.dev/) |
+| 3 | JS | A [Vue.js website](https://vue.arnov.dev/) to slowly learn [Vue.js](https://vuejs.org/) |
+| 4 | 🤓 | A small [blog about math related topics][5] when I feel like talking theory |
+: {tbl-colwidths="[10, 10, 80]"}
 
-test.. test... test..... test?..... test!....
 
-!!!!!! ???? ,,  -- ---
+That's a lot ! But I also have some personnal matters ...
 
-"Smartypants, double quotes" and 'single quotes'
+# The personal stuff
 
+## I'm Autistic & Queer
 
-## Emphasis
+I'm a proud [Aspie / Neurodivergent person][4], I received an official diagnosis from [Hôpital Saint-Anne](https://www.hopital-saint-anne.fr/) in Paris, France a year or so ago. They're considered a bit competent on the topic so I trust them.
 
-**This is bold text**
+<p align="center" style="max-width: 100vw ;">
+  <img src="https://i.imgur.com/3bVPml7.png" width="1000"/>
+</p>
 
-__This is bold text__
+I'm also most probably trans 🏳️‍⚧️, but I'm not sure 100% yet. I'm currently trying to figure out how to go about it, the process is a bit complicated in France, but it's a work in progress.
 
-*This is italic text*
+I wrote a short piece about the [relationship between autism and gender diversity][6] a while back.
 
-_This is italic text_
+## I like games
 
-~~Strikethrough~~
+I'm also a big video game player, so maybe we can play together sometime ! I'm currently a bit busy with work, but I'd love to share some factoids about my favorite games.
 
+## I like music
 
-## Blockquotes
+I'm a HUGE music nerd, just to name a few of my favorite genres:
 
+| Genre | Description |
+| --- | --- |
+| 70's rock | especially progressive rock and Cantebury scene / Krautrock bands |
+| Bebop and Hard-Bop | The golden age of Bebop and Hard-Bop, especially the work of Miles Davis, who helped me bridge the gap between Jazz and Rock (I'm a huge fan of his work with John McLaughlin) |
+| IDM | Especially the work of μ-Ziq, Floating Points, Squarepusher, and Boards of Canada |
+| Hip-Hop | The classics, especially the work of MF Doom, Madlib, and J Dilla |
+| Hyperpop | I'm a huge fan of the work of Charli XCX ! |
+| K-pop | I've recently discovered I like K-pop thanks to League of Legends' KDA group, and I'm slowly getting into the genre  .. |
+| Metal | I love Gojira obviously, but a lot of artists here and there, the progressive Metal scene is pretty dope aswell 🤩 |
+: {tbl-colwidths="[20, 80]"}
 
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
+... and many more 🎵
 
+## I like math
 
-## Lists
+I'm also a big math nerd, I'm currently trying to learn a bit more about statistics and probability theory, as I'm a recovering tentative PhD grad (I worked on [Causal Inference][7] back in [Shanghai][8]).
 
-Unordered
+I'd love learning more, but I'm busy and already have a lot to do !
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
+[2]: https://i.imgur.com/Bjj0AGm.png
+[3]: https://imgur.com/a/2MCtBRI
+[1]: https://goo.gl/maps/VMkGySJKihoE35At6
+[4]:https://www.health.harvard.edu/blog/what-is-neurodiversity-202111232645
+[5]: https://write.as/arnov/
+[6]: https://write.as/arnov/bayes-can-tell-you-youre-transgender
+[7]: https://en.wikipedia.org/wiki/Causal_inference
+[8]: https://en.wikipedia.org/wiki/Shanghai_Jiao_Tong_University
