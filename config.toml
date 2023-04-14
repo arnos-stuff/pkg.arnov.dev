@@ -57,3 +57,16 @@ privacyEnhanced = true
   [module.hugoVersion]
     extended = true
     min = "0.104.0"
+
+[deployment]
+# By default, files are uploaded in an arbitrary order.
+# Files that match the regular expressions in the "Order" list
+# will be uploaded first, in the listed order.
+order = [".png$", ".svg$", ".jpg$", ".gif$"]
+
+
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "deploy"
+include = ["**.{png,jpg,svg,html,js,css}", "assets/**/**.{png,jpg,svg,html,js,css}"]
