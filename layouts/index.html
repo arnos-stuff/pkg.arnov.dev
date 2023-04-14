@@ -147,62 +147,6 @@
         </div>
     </div>
 
-    <!-- Hero section -->
-    <div class="overflow-hidden sm:pt-6 lg:relative">
-        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
-            <div>
-                <div class="md:mt-8">
-                    <div class="mt-6 sm:max-w-xl">
-                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-                            New computer / New website / New life
-                        </h1>
-                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
-                            I finally bought myself a nice RTX 3070 Ti Computer with 32GB of RAM, still setting it up !
-                            Also really started to dig into the concept of elasticity in terms of how it affects tax revenue ! 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div class="hidden sm:block">
-                    <div
-                         class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full">
-                    </div>
-                    <svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none"
-                         viewBox="0 0 404 392" loading="lazy">
-                        <defs>
-                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20"
-                                     patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60"
-                                      fill="currentColor" />
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
-                    </svg>
-                </div>
-                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $heroOne := resources.GetMatch "images/featured/month-march-end.png" }}
-
-                    {{ $tiny := ($heroOne.Fit "400x200 q95") }}
-                    {{ $small := ($heroOne.Fit "600x300 q95") }}
-                    {{ $medium := ($heroOne.Fit "800x400 q95") }}
-                    {{ $large := ($heroOne.Fit "1000x500 q95") }}
-
-                    <img srcset="
-                        {{- with $tiny.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $small.RelPermalink -}}, {{.}} 600w{{- end -}}
-                        {{- with $medium.RelPermalink -}}, {{.}} 800w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 1000w{{- end -}}" src="{{ $heroOne.RelPermalink }}"
-                         alt="News !"
-                         class="w-full rounded-l-3xl shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Logo cloud section -->
     <div class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
