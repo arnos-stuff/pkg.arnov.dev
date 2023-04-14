@@ -1,7 +1,7 @@
 <!-- Footer section -->
-{{ $alpine := resources.Get "js/alpine.js" | js.Build }}
+{{ $alpine := resources.Get "js/alpine.js" | js.Build "alpine.js"}}
 <script src="{{ $alpine.RelPermalink }}" defer></script>
-{{ $js := resources.Get "js/darkmode.js" | js.Build }}
+{{ $js := resources.Get "js/darkmode.js" | js.Build "darkmode.js"}}
 <script src="{{ $js.RelPermalink }}" defer></script>
 <footer class="bg-gray-900">
     <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
