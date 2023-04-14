@@ -46,7 +46,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Install Node.js dependencies
+      - name: Run Tailwind deps
+        run: npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css
+      - name: Install NodeJS deps
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
