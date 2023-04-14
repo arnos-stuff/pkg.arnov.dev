@@ -4255,18 +4255,13 @@ EmojiSymbols;
     height: 66.666667%;
   }
 
-  .sm\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
   .sm\:w-auto {
     width: auto;
   }
 
-  .sm\:min-w-fit {
-    min-width: -moz-fit-content;
-    min-width: fit-content;
+  .sm\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .sm\:max-w-3xl {
