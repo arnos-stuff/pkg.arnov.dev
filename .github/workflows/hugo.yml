@@ -39,6 +39,8 @@ jobs:
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           
       - name: install go
+        env:
+          PATH: /home/linuxbrew/.linuxbrew/bin/:$PATH
         run: brew install go
       - name: Install Hugo CLI
         run: |
