@@ -7,8 +7,8 @@ featured_image: ../assets/images/global/Branding/Python-Sign.webp
 summary: A rich CLI template for pastebin CLI tools
 description: ix is a command line interface for [ix.io](https://ix.io), a pastebin service. I tried to make this CLI as "reusable" as possible, so that you can clone this repository and use it as a template for your own pastebin CLI tool.
 author: shae
-authorimage: ../assets/images/global/Branding/Python-Sign.webp
-categories: Blog
+authorimage: ../assets/images/global/Branding/Python-Sign-400.webp
+categories: Python
 tags: Blog
 ---
 # A rich CLI template for pastebin CLI tools

@@ -8,6 +8,7 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
+relativeURLs = true
 paginate = 9
 darkmode_js = ["assets/js/darkmode.js"]
 enableInlineShortcodes = true
@@ -29,6 +30,7 @@ unsafe = true
 [taxonomies]
 category = "Categories"
 tag = "Tags"
+posts = '/posts/:section/:title/'
 
 [privacy]
 [privacy.disqus]

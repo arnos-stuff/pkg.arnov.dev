@@ -36,7 +36,7 @@
                             <span class="sr-only">{{ .Params.author }}</span>
                             {{ with .Params.authorimage }}
                             {{ with resources.Get . }}
-                            {{ $authorimage := (.Resize "400x webp").RelPermalink }}
+                            {{ $authorimage := (.Resize "400x webp q95").RelPermalink }}
                             <img class="w-screen h-full rounded-full" src="{{ $authorimage }}" alt="">
                             {{ end }}
                             {{ end }}
