@@ -4260,6 +4260,10 @@ EmojiSymbols;
     width: fit-content;
   }
 
+  .sm\:w-auto {
+    width: auto;
+  }
+
   .sm\:min-w-fit {
     min-width: -moz-fit-content;
     min-width: fit-content;
